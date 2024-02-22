@@ -1,0 +1,9 @@
+.DialogOverlay {
+    overflow-y: auto;
+  }
+  
+  .DialogContent {
+    top: 0;
+    transform: translateX(-50%) translateY(0%);
+    max-width: 50rem;
+  }

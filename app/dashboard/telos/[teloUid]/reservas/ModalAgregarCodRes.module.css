@@ -1,0 +1,6 @@
+.agregarHabitacion {
+    cursor: pointer;
+}
+.agregarHabitacion:hover {
+    fill: red;
+}
