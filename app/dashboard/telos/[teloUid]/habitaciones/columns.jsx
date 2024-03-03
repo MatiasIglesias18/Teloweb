@@ -160,8 +160,8 @@ export const columns = [
             >
               Eliminar
             </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Ver Tipo Habitacion</DropdownMenuItem>
+            {/* <DropdownMenuSeparator />
+            <DropdownMenuItem>Ver Tipo Habitacion</DropdownMenuItem> */}
           </DropdownMenuContent>
         </DropdownMenu>
       );

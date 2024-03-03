@@ -92,7 +92,7 @@ export async function POST(request) {
       creado: new Date(),
       operadorUid: userUid,
       operadorEmail: userCheckResult.user.data().email,
-      operadorName: userCheckResult.user.data().displayName,
+      operadorName: userCheckResult.user.data().displayName ? userCheckResult.user.data().displayName : userCheckResult.user.data().email,
       estado: "pendiente",
       teloName: teloSnapshot.data().nombre,
     });
@@ -125,7 +125,7 @@ export async function POST(request) {
       creado: new Date(),
       operadorUid: userUid,
       operadorEmail: userCheckResult.user.data().email,
-      operadorName: userCheckResult.user.data().displayName,
+      operadorName: userCheckResult.user.data().displayName ? userCheckResult.user.data().displayName : userCheckResult.user.data().email,
       estado: "pendiente",
       teloName: teloSnapshot.data().nombre,
     });
@@ -145,7 +145,7 @@ export async function POST(request) {
       creado: new Date(),
       operadorUid: userUid,
       operadorEmail: userCheckResult.user.data().email,
-      operadorName: userCheckResult.user.data().displayName,
+      operadorName: userCheckResult.user.data().displayName ? userCheckResult.user.data().displayName : userCheckResult.user.data().email,
       estado: "pendiente",
       teloName: teloSnapshot.data().nombre,
     });

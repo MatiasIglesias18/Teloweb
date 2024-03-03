@@ -1,7 +1,6 @@
-import { auth as adminAuth, auth }  from "firebase-admin";
+import { auth as adminAuth, auth } from "firebase-admin";
 import { auth as clientAuth } from "@/firebase/config";
 import { cookies } from "next/headers";
-import { getAuth } from "firebase-admin/auth";
 const checkUserLoginAuth = async (session, roles, db) => {
   if (!session) {
     return {

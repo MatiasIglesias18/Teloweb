@@ -85,7 +85,7 @@ const solicitarUpdateFotosTelo = async (teloRef, files) => {
     teloName: teloDoc.data().nombre,
     operadorEmail: auth.currentUser.email,
     operadorUid: auth.currentUser.uid,
-    operadorName: auth.currentUser.displayName,
+    operadorName: auth.currentUser.displayName ? auth.currentUser.displayName : auth.currentUser.email,
   });
   
 

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { FaTachometerAlt, FaUserCog } from "react-icons/fa";
 import LogOutButton from "../../../components/shared/LogOutButton/LogOutButton";
@@ -6,11 +6,11 @@ import { Button } from "@/components/ui/button";
 import { FaListCheck, FaUsers } from "react-icons/fa6";
 import { BsHousesFill, BsHouseCheckFill } from "react-icons/bs";
 
-const Sidebar = ({onLinkClick}) => {
+const Sidebar = ({ onLinkClick }) => {
   const setClose = onLinkClick ? onLinkClick : () => {};
   return (
     <ul className="menu bg-base-200 rounded-box [&_li:not(:last-child)]:mb-2 [&_ul]:mt-2">
-      <li>
+      {/* <li>
         <Button
           variant="ghost"
           className="justify-start flex gap-2 w-full text-md"
@@ -20,14 +20,14 @@ const Sidebar = ({onLinkClick}) => {
             <FaTachometerAlt /> <h2 className="inline">Dashboard</h2>
           </Link>
         </Button>
-      </li>
+      </li> */}
       <li>
         <Button
           variant="ghost"
           className={`justify-start flex gap-2 w-full text-md `}
           asChild
         >
-          <Link href="/admin/mi-cuenta" onClick={() => setClose(false)}>
+          <Link href="/admin" onClick={() => setClose(false)}>
             <FaUserCog />
             Mi Cuenta
           </Link>
@@ -52,9 +52,9 @@ const Sidebar = ({onLinkClick}) => {
           className="justify-start flex gap-2 w-full text-md"
           asChild
         >
-          <Link href="/admin/telos" onClick={() => setClose(false)}>
-            <BsHousesFill />
-            Telos
+          <Link href="/admin/aprobar-telos" onClick={() => setClose(false)}>
+            <BsHouseCheckFill />
+            Alta inicial de Telos
           </Link>
         </Button>
       </li>
@@ -64,9 +64,9 @@ const Sidebar = ({onLinkClick}) => {
           className="justify-start flex gap-2 w-full text-md"
           asChild
         >
-          <Link href="/admin/aprobar-telos" onClick={() => setClose(false)}>
-            <BsHouseCheckFill />
-            Alta inicial de Telos
+          <Link href="/admin/telos" onClick={() => setClose(false)}>
+            <BsHousesFill />
+            Telos
           </Link>
         </Button>
       </li>
